@@ -1,0 +1,6 @@
+pandas>=1.5
+numpy>=1.23
+matplotlib>=3.6
+plotly>=5.15
+networkx>=3.0
+geoip2>=4.7
