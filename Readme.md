@@ -97,6 +97,32 @@ Executive findings and mitigation recommendations
 | Bank4 concentration | **5 identities**, **43 IPs**, and **5 devices** across 48 rows | Smaller but linked suspicious cluster |
 | Network linkage | Suspicious entities shared ASN, country, and fingerprint-suppression patterns | Common attacker infrastructure |
 
+## Visual Evidence
+
+### Compromised Entity Behavior
+
+![Behavior summary for the compromised device and identity](./assets/behavior-summary.png)
+
+The compromised identity associated with Bank8 rotated across **70 unique IP addresses**, while the compromised Bank4 device retained a much smaller, stable footprint. This contrast helps separate targeted device compromise from high-volume identity abuse.
+
+### Identity Activity Concentration
+
+![Pareto chart of the five most active identities](./assets/identity-pareto.png)
+
+The leading identity accounts for **27.5%** of all IP-level observations, and the five most active identities together represent **55.1%**. This level of concentration is inconsistent with evenly distributed customer activity.
+
+### Device Reuse
+
+![The five most frequently observed devices](./assets/top-devices.png)
+
+One device generated **400 observations**, almost twice the volume of the second-ranked device. The steep drop after the first device highlights a small set of environments driving a disproportionate share of activity.
+
+### IP Behavior
+
+![Behavioral comparison of the five most active IP addresses](./assets/ip-behavior.png)
+
+The most active IP addresses combine high event volume with varying identity and device diversity. IPs shared by multiple identities or devices are priority candidates for proxy, credential-stuffing, or coordinated infrastructure investigation.
+
 ### What the Patterns Suggest
 
 - A small number of devices and fingerprints control a disproportionately large amount of activity.
